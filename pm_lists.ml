@@ -18,8 +18,19 @@ let rec sum lst =
   | [] -> 0
   | h :: t -> h + sum t
 
+(* syntactic sugar *)
+let rec sum = function
+  | [] -> 0
+  | h :: t -> h + sum t
+
+
 let rec length lst = 
   match lst with
+  | [] -> 0
+  | h :: t -> 1 + length t
+
+(* syntactic sugar *)
+let rec length = function
   | [] -> 0
   | h :: t -> 1 + length t
 
